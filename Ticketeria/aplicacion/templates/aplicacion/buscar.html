@@ -1,0 +1,23 @@
+{% extends "aplicacion/index.html" %}
+
+
+{% block header %} 
+<h2>Buscar compra</h2>
+{% endblock header %} 
+
+{% block features %}
+
+<form action="{% url 'encontrarArtista' %}" method="get">
+    {% csrf_token %}
+    <p>Ingrese artista que desea buscar: <input type="text" name="buscar" id="buscar" ></p>
+    <input type="submit" value="Buscar">
+</form>
+<!--https://github.com/NormanBeltran/50215-Clase-21-->
+
+{% endblock features %}
+
+{% block testimonial %}
+{% endblock testimonial %}
+
+{% block preview %}
+{% endblock preview %}

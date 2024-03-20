@@ -1,0 +1,34 @@
+{% extends "aplicacion/index.html" %}
+
+
+{% block header %} 
+<h2>Fechas</h2>
+{% endblock header %} 
+
+{% block features %}
+<table class> <!--completa una class-->
+    <thead>
+        <tr>
+            <th>Artista</th>
+            <th>Date</th>
+            <th>Lugar</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for p in proximafecha %} 
+       <tr>
+        <td> {{ p.id }} </td>
+        <td> {{ p.artista }} </td>
+        <td> {{ p.date }} </td>
+        <td> {{ p.lugar }} </td>
+       </tr>
+    {% endfor %}    
+    </tbody>
+    </table>
+{% endblock features %}
+
+{% block testimonial %}
+{% endblock testimonial %}
+
+{% block preview %}
+{% endblock preview %}

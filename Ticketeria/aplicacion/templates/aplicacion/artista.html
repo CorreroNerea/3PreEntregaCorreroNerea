@@ -1,0 +1,32 @@
+{% extends "aplicacion/index.html" %}
+
+
+{% block header %} 
+<h2>Artista</h2>
+{% endblock header %} 
+
+{% block features %}
+<table class> <!--completa una class-->
+    <thead>
+        <tr>
+            <th>Artista</th>
+            <th>Descripcion</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for a in artista %} 
+       <tr>
+        <td> {{ a.id }} </td>
+        <td> {{ a.nombreArtista }} </td>
+        <td> {{ a.descripcion }} </td>
+       </tr>
+    {% endfor %}    
+    </tbody>
+    </table>
+{% endblock features %}
+
+{% block testimonial %}
+{% endblock testimonial %}
+
+{% block preview %}
+{% endblock preview %}
